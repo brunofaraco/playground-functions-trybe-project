@@ -2,7 +2,7 @@
 function compareTrue() {
   // seu código aqui
 }
-
+// Bruno Faraco esqueça tudo filho
 // Desafio 2
 function calcArea() {
   // seu código aqui
