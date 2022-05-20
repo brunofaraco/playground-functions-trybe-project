@@ -35,13 +35,13 @@ function highestCount(array) {
   let higherNumber = array[0];
   let higherNumberCounter = 0;
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (higherNumber < array[index]) {
-      higherNumber = array[index];
+  for (let index6 = 0; index6 < array.length; index6 += 1) {
+    if (higherNumber < array[index6]) {
+      higherNumber = array[index6];
     };
   }
-  for (let index2 = 0; index2 < array.length; index2 += 1) {
-    if (higherNumber === array[index2]) {
+  for (let index62 = 0; index62 < array.length; index62 += 1) {
+    if (higherNumber === array[index62]) {
       higherNumberCounter += 1;
     };
   };
@@ -64,23 +64,32 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayFB) {
   let answerFB = [];
+  let pointsSum = 0;
 
-  for (let index = 0; index < arrayFB.length; index += 1) {
-    if ((arrayFB[index] / 3) === 1 && (arrayFB[index] / 5) === 1) {
-      answerFB.push('fizzBuzz');
-    } else if ((arrayFB[index] / 3) === 1 && (arrayFB[index] / 5) !== 1) {
-      answerFB.push('fizz');
-    } else if ((arrayFB[index] / 3) !== 1 && (arrayFB[index] / 5) === 1) {
-      answerFB.push('buzz');
+  for (let index8 = 0; index8 < arrayFB.length; index8 += 1) {
+    if (arrayFB[index8] % 3 === 0 && arrayFB[index8] % 5 === 0) {
+        pointsSum = (pointsSum * 0) + 8;
+    } else if (arrayFB[index8] % 5 === 0) {
+        pointsSum = (pointsSum * 0) + 5;
+    } else if (arrayFB[index8] % 3 === 0) {
+        pointsSum = (pointsSum * 0) + 3
     } else {
-    answerFB.push('bug!');
+        pointsSum = pointsSum * 0;
     };
-  }
 
-  console.log(answerFB);
-
+    if (pointsSum === 8) {
+      answerFB.push('fizzBuzz');
+    } else if (pointsSum === 5) {
+      answerFB.push('buzz');
+    } else if (pointsSum === 3) {
+      answerFB.push('fizz');
+    } else {
+      answerFB.push('bug!')
+    };
+  };
+  return answerFB;
 }
-fizzBuzz ([2, 15, 7, 9, 45]);
+
 // Desafio 9
 function encode() {
   // seu código aqui
